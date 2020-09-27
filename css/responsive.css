@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+  .calorie-row{
+  flex-direction: column;
+  height: 95rem;
+  }
+  .calories-form{
+    margin-top: 0;
+    padding: 1.4rem;
+    text-align: center;
+  }
+  .dial {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 700px) {
+  .calorie-row{
+    flex-direction: column;
+    height: 42rem;
+  }
+  .calories-form{
+    margin-top: 0;
+  }
+  .timer-container {
+  padding: 0 0;
+  }
+  .dial {
+    display: none;
+  }
+}

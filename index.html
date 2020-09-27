@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!-- chart.js -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous" />
+		<!-- google fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+		
+		<!-- fontawesome -->
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+			integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+			crossorigin="anonymous"
+		/>
+		<!-- google fonts Materialize -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!--Import materialize.css-->
+		<link
+			type="text/css"
+			rel="stylesheet"
+			href="css/materialize.min.css"
+			media="screen,projection"
+		/>
+		<!-- css -->
+		<link rel="stylesheet" href="./css/responsive.css">
+		<link rel="stylesheet" href="./css/main.css" />
+		<!-- ajax -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+		/>
+		<!-- favicon -->
+		<link rel="icon" href="favicon.ico" />
+		<title>onTrack</title>
+	</head>
+	<body>
+		<header>
+			<!-- Navbar -->
+			<div class="navbar-fixed">
+				<nav class="cyan">
+					<div class="container">
+						<div class="nav-wrapper">
+							<a href="#home" class="brand-logo"><span>on</span>Track</a>
+							<a class="button-collapse" data-activates="mobile-nav" href="#">
+								<i class="material-icons">menu</i>
+							</a>
+							<ul class="nav-ul right hide-on-med-and-down">
+								<li>
+									<a href="#calorie-tracker">Calorie Tracker</a>
+								</li>
+								<li>
+									<a href="weight.html">Weight Tracker </a>
+								</li>
+								<li>
+									<a href="#tips">Tips</a>
+								</li>
+								<li>
+									<a href="contact.html">Contact</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<!-- side nav -->
+			<ul class="side-nav side-nav-ul cyan darken-1" id="mobile-nav">
+				<li>
+					<a href="#calorie-tracker">Calorie Tracker</a>
+				</li>
+				<li>
+					<a href="#weight-tracker">Weight Tracker </a>
+				</li>
+				<li>
+					<a href="#tips">Tips</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact</a>
+				</li>
+			</ul>
+			<!-- Showcase -->
+			<section class="slider">
+				<ul class="slides">
+					<li>
+						<img src="img/resort1.jpg" alt="" />
+						<div class="caption center-align">
+							<h2>Get your beach body!</h2>
+							<h5 class="light grey-text text-lighten-3 hide-on-small-only">
+								Easily keep track of your daily calories
+							</h5>
+							<a href="#calorie-tracker" class="btn btn-large cyan"
+								>Track your Calories</a
+							>
+						</div>
+					</li>
+					<li>
+						<img src="img/resort2.jpg" alt="" />
+						<div class="caption left-align">
+							<h2>Get Results</h2>
+							<h5 class="light grey-text text-lighten-3 hide-on-small-only">
+								Learn the best tips for sticking to your goals
+							</h5>
+							<a href="#" class="btn btn-large cyan">Tips on how!</a>
+						</div>
+					</li>
+					<!-- <li>
+            <img src="img/resort3.jpg" alt="">
+            <div class="caption right-align">
+              <h2>Group & Individual Getaways</h2>
+              <h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam non illo earum cumque id est!</h5>
+              <a href="#" class="btn btn-large">Learn More</a>
+            </div>
+          </li> -->
+				</ul>
+			</section>
+		</header>
+
+		<!--====================================================================
+========================================================================-->
+		<section
+			id="calorie-tracker"
+			class="section-calorie-tracker cyan darken-1 white-text section"
+		>
+			<div class="container1">
+				<div class="row">
+					<div class="col s12">
+						<h3 class="center">
+							<span class="calorie-logo white-text">Calorie</span> Tracker
+						</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="grey lighten-3">
+				<div class="timer-container section">
+					<div class="calorie-row">
+						<!-- <div class="calorie-row-components"> -->
+							<form class="calories-form grey lighten-2">
+								<div class="form-entry form-entry-1">
+									Goal:
+									<div class="input-field">
+										<label for="goal"></label>
+										<input
+											class="input-field center tooltipped"
+											data-tooltip="Click to input your daily goal"
+											data-position="left"
+											id="goal"
+											type="text"
+											value="1400"
+											maxlength="5"
+										/>
+									</div>
+								</div>
+
+								<div class="form-entry">
+									Calories:
+									<div class="input-field">
+										<input
+											class="input-field center"
+											id="caloriesInput"
+											type="text"
+											placeholder="Input Calories"
+											maxlength="4"
+											autocomplete="off"
+										/>
+										<label for="caloriesInput"></label>
+										<button
+											class="btn cyan lighten-1 waves-effect waves-light"
+											id="addButton"
+										>
+											add
+										</button>
+										<button class="btn orange lighten-1 waves-effect" id="removeButton">
+											remove
+										</button>
+										<!-- <button class="btn teallighten-1" id="undoButton"><i class="fas fa-undo-alt"></i></button> -->
+									</div>
+								</div>
+
+								<div class="form-entry">
+									Total Calories:
+									<div class="input-field">
+										<div class="center" id="total" type="text">0</div>
+									</div>
+									<button
+										class="btn-large cyan lighten-1 waves-effect waves-light"
+										id="resetButton"
+									>
+										RESTART
+									</button>
+								</div>
+							</form>
+						<!-- </div> -->
+
+						<!-- <div class="calorie-row-components"> -->
+							<svg class="dial">
+								<circle
+									id="dial2"
+									fill="transparent"
+									stroke="rgba(58, 53, 56, 0.98)"
+									stroke-width="50"
+									r="280"
+									cx="-150"
+									cy="345"
+									transform="rotate(-90 100 100)"
+								/>
+								<circle
+									fill="transparent"
+									stroke="#ffa726"
+									stroke-width="40"
+									r="280"
+									cx="-150"
+									cy="345"
+									transform="rotate(-90 100 100)"
+								/>
+								<circle
+									id="dial1"
+									fill="transparent"
+									stroke="#00bcd4"
+									stroke-width="40"
+									r="280"
+									cx="-150"
+									cy="345"
+									transform="rotate(-90 100 100)"
+								/>
+
+								<text id="circleDisplay" x="50%" y="50%"></text>
+							</svg>
+						<!-- </div> -->
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SOCIAL MEDIA -->
+		<section class="section section-follow cyan darken-2 white-text center">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<h4>Follow onTrack</h4>
+						<p>Follow us on social media for our upcoming releases</p>
+						<a href="htttps://facebook.com" target="_blank" class="white-text">
+							<i class="fab fa-facebook fa-4x"></i>
+						</a>
+						<a href="htttps://twitter.com" target="_blank" class="white-text">
+							<i class="fab fa-twitter fa-4x"></i>
+						</a>
+						<a href="htttps://linkedin.com" target="_blank" class="white-text">
+							<i class="fab fa-linkedin fa-4x"></i>
+						</a>
+						<a href="htttps://googleplus.com" target="_blank" class="white-text">
+							<i class="fab fa-google-plus fa-4x"></i>
+						</a>
+						<a href="htttps://pinterest.com" target="_blank" class="white-text">
+							<i class="fab fa-pinterest fa-4x"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script src="index.js"></script>
+		<script
+			type="text/javascript"
+			src="https://code.jquery.com/jquery-3.2.1.min.js"
+		></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				// site navabar
+				$(".button-collapse").sideNav();
+			});
+			$(".slider").slider({
+				//makes it so slides change on their own
+				indicators: false,
+				height: 900,
+				transition: 300,
+				interval: 6000,
+			});
+		</script>
+	</body>
+</html>

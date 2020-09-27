@@ -1,0 +1,194 @@
+/* font-family: 'Cabin', sans-serif;
+font-family: 'Lobster Two', cursive; */
+:root {
+  --primary-color: #00bcd4;
+  --secondary-color: #b6eb7a;
+  --third-color: #fb7813;
+  --fourth-color: #ffa726;
+  --light1-color: #f7f7ee;
+  --dark-color: #000000;
+  --light-color:#fff;
+  --lightish-color: rgb(240, 240, 240, 0.50);
+  --medium-color: rgb(240, 240, 240, 0.45);
+  --strong-color: rgb(240, 240, 240, 0.70);
+  --grey-color: rgba(58, 53, 56, 0.98);
+  --max-width: 1100px;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cardo', sans-serif;
+    /* line-height: 1.5; */
+}
+/* utility */
+.timer-container{
+  /* width: 100%; */
+}
+
+/* NAVBAR */
+.nav-ul li a{
+  font-size: 1.2rem;
+}
+.nav-wrapper .brand-logo{
+  font-size: 2.5rem !important;
+  font-family: 'Cardo', serif !important;
+  font-weight: 800;
+}
+.nav-wrapper span{
+  color: var(--third-color);
+}
+
+.side-nav-ul li a{
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: solid 1px white;
+}
+
+.side-nav-ul li{
+  border-bottom: solid 1px white;
+}
+
+/* SLIDER */
+.slider .btn {
+  margin-top: 20px;
+}
+
+
+/* DIAL */
+.dial {
+  height: 700px;
+  width: 700px;
+}
+
+#circleDisplay {
+  dominant-baseline: central;
+  text-anchor: middle; 
+  font-size: 6rem;
+  color: var(--grey-color);
+  text-align: center;
+}
+/* ROW for form and circle */
+.calorie-row{
+  display: flex; 
+  justify-content: center;
+}
+
+/* FORM */
+
+.calories-form{
+  margin-top: 4.4rem;
+  color: var(--grey-color);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 2.2rem;
+  padding: 1.4rem;
+  text-align: center;
+}
+
+
+
+
+.calories-form .form-entry{
+  margin: 1rem .5rem .3rem .5rem;
+}
+
+.calories-form input {
+  font-weight: bold;
+  color: var(--grey-color);
+}
+.calories-form #caloriesInput {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--grey-color);
+}
+
+.calories-form #goal {
+  margin-top: 0;
+  font-size: 2.6rem ;
+  border-bottom: none;
+}
+
+.calories-form #total {
+  font-weight: bold;
+  color: var(--grey-color);
+  margin-top: 0;
+  font-size: 2.6rem ;
+  border-bottom: none;
+}
+
+.calories-form button {
+  border: none;
+}
+
+
+/* Active classes */
+#goal{
+  text-shadow: 0 0 px #6B48CA, 0 0 5px #101010;
+}
+
+.danger { 
+  color: var(--third-color) !important; 
+}
+.good{
+  color: rgba(124, 229, 19) !important;
+}
+
+
+/* FOLLOW */
+.section-follow .fa-4x {
+  margin-top: 20px;
+  margin: 15px 5px 0 5px;
+}
+
+/* CONTACT */
+.contact-card{
+  height: 20.5rem;
+  padding-top: 2.8rem;
+  margin-top: 2.5rem;
+}
+
+.contact-adress{
+  height: 12.5rem;
+  font-size: 1.2rem;
+  padding-top: 3rem;
+}
+
+.contact-adress .card-title{
+  color: var(--grey-color);
+  font-size: 2rem;
+  padding-top: 1rem;
+
+}
+
+.contact-form{
+  height: 34rem;
+  padding-top: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.7rem;
+  color: var(--grey-color);
+  padding-bottom: 0;
+}
+.contact-form .title-contact {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.email-icon{
+  color: var(--fourth-color);
+}
+
+/* @media (max-width: 768px) {
+  .calorie-row{
+  flex-direction: column;
+  height: 95rem;
+  }
+
+
+} */

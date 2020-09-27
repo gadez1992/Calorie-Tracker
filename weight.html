@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!-- chart.js -->
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+		<!-- google fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+		
+		<!-- fontawesome -->
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+			integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+			crossorigin="anonymous"
+		/>
+		<!-- google fonts Materialize -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!--Import materialize.css-->
+		<link
+			type="text/css"
+			rel="stylesheet"
+			href="css/materialize.min.css"
+			media="screen,projection"
+		/>
+		<!-- css -->
+		<link rel="stylesheet" href="./css/responsive.css">
+		<link rel="stylesheet" href="./css/main.css" />
+		<!-- ajax -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+		/>
+		<!-- favicon -->
+		<link rel="icon" href="favicon.ico" />
+		<title>onTrack</title>
+	</head>
+
+	<body>
+		<header>
+			<!-- Navbar -->
+			<div class="navbar-fixed">
+				<nav class="cyan">
+					<div class="container">
+						<div class="nav-wrapper">
+							<a href="#home" class="brand-logo"><span>on</span>Track</a>
+							<a class="button-collapse" data-activates="mobile-nav" href="#">
+								<i class="material-icons">menu</i>
+							</a>
+							<ul class="nav-ul right hide-on-med-and-down">
+								<li>
+									<a href="index.html">Calorie Tracker</a>
+								</li>
+								<li>
+									<a href="weight.html">Weight Tracker </a>
+								</li>
+								<li>
+									<a href="#tips">Tips</a>
+								</li>
+								<li>
+									<a href="contact.html">Contact</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<!-- side nav -->
+			<ul class="side-nav side-nav-ul cyan darken-1" id="mobile-nav">
+				<li>
+					<a href="index.html">Calorie Tracker</a>
+				</li>
+				<li>
+					<a href="#weight-tracker">Weight Tracker </a>
+				</li>
+				<li>
+					<a href="#tips">Tips</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact</a>
+				</li>
+			</ul>
+		</header>
+
+		<!--=================================================================================================================================-->
+		<section
+			id="calorie-tracker"
+			class="section-calorie-tracker cyan darken-1 white-text section"
+		>
+			<div class="container1">
+				<div class="row">
+					<div class="col s12">
+						<h3 class="center">
+							<span class="calorie-logo white-text">Weight</span> Tracker
+						</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="grey lighten-3">
+				<div class="timer-container section">
+					<div class="calorie-row">
+							
+							<form class="calories-form grey lighten-2">
+								<div class="form-entry form-entry-1">
+									Goal:
+									<div class="input-field">
+										<label for="goal"></label>
+										<input
+											class="input-field center tooltipped"
+											data-tooltip="Click to input your daily goal"
+											data-position="left"
+											id="goal"
+											type="text"
+											value="1400"
+											maxlength="5"
+										/>
+									</div>
+								</div>
+
+								<div class="form-entry">
+									Calories:
+									<div class="input-field">
+										<input
+											class="input-field center"
+											id="caloriesInput"
+											type="text"
+											placeholder="Input Calories"
+											maxlength="4"
+											autocomplete="off"
+										/>
+										<label for="caloriesInput"></label>
+										<button
+											class="btn cyan lighten-1 waves-effect waves-light"
+											id="addButton"
+										>
+											add
+										</button>
+										<button class="btn orange lighten-1 waves-effect" id="removeButton">
+											remove
+										</button>
+									</div>
+								</div>
+
+								<div class="form-entry">
+									Total Calories:
+									<div class="input-field">
+										<div class="center" id="total" type="text">0</div>
+									</div>
+									<button
+										class="btn-large cyan lighten-1 waves-effect waves-light"
+										id="resetButton"
+									>
+										RESTART
+									</button>
+								</div>
+							</form>
+							<canvas id="myChart">
+
+							</canvas>	
+		</section>
+
+		<!-- SOCIAL MEDIA -->
+		<section class="section section-follow cyan darken-2 white-text center">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<h4>Follow onTrack</h4>
+						<p>Follow us on social media for our upcoming releases</p>
+						<a href="htttps://facebook.com" target="_blank" class="white-text">
+							<i class="fab fa-facebook fa-4x"></i>
+						</a>
+						<a href="htttps://twitter.com" target="_blank" class="white-text">
+							<i class="fab fa-twitter fa-4x"></i>
+						</a>
+						<a href="htttps://linkedin.com" target="_blank" class="white-text">
+							<i class="fab fa-linkedin fa-4x"></i>
+						</a>
+						<a href="htttps://googleplus.com" target="_blank" class="white-text">
+							<i class="fab fa-google-plus fa-4x"></i>
+						</a>
+						<a href="htttps://pinterest.com" target="_blank" class="white-text">
+							<i class="fab fa-pinterest fa-4x"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script src="index.js"></script>
+		<script src="chart.js"></script>
+		<script
+			type="text/javascript"
+			src="https://code.jquery.com/jquery-3.2.1.min.js"
+		></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				// site navabar
+				$(".button-collapse").sideNav();
+			});
+			$(".slider").slider({
+				//makes it so slides change on their own
+				indicators: false,
+				height: 900,
+				transition: 300,
+				interval: 6000,
+			});
+		</script>
+	</body>
+</html>
