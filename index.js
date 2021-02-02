@@ -4,7 +4,6 @@ class Tracker {
 		addButton,
 		removeButton,
 		resetButton,
-		// undoButton,
 		calories,
 		total,
 		goal
@@ -12,7 +11,6 @@ class Tracker {
 		this.circleDisplay = circleDisplay;
 		this.addButton = addButton;
 		this.removeButton = removeButton;
-		// this.undoButton = undoButton;
 		this.resetButton = resetButton;
 		this.circleDisplay = circleDisplay;
 		this.calories = calories;
@@ -22,7 +20,6 @@ class Tracker {
 		this.addButton.addEventListener("click", this.incrementCalories);
 		this.removeButton.addEventListener("click", this.removeCalories);
 		this.resetButton.addEventListener("click", this.reset);
-		// this.undoButton.addEventListener("click", this.undo);
 	}
 	//RESTART
 	reset = (e) => {
@@ -30,6 +27,7 @@ class Tracker {
 		this.total.textContent = 0;
 		this.circleDisplay.textContent = "";
 		this.calories.value = "";
+		totalInputCalories = 0;
 		this.circleAnimation();
 	};
 
@@ -102,14 +100,10 @@ class Tracker {
 	//CIRCLE ANIMATION
 	circleAnimation = () => {
 		percent = totalInputCalories / Number(this.goal.value);
+		console.log(totalInputCalories);
 		offset = 0;
 		offset += -(perimeter * percent);
 		circle.setAttribute("stroke-dashoffset", offset);
-	};
-
-	//UNDO BUTTON
-	undo = () => {
-		totalCalories -= added;
 	};
 
 	//MESSAGE AFTER CALORIE GOAL IS MET
@@ -129,7 +123,6 @@ class Tracker {
 const circleDisplay = document.querySelector("#circleDisplay");
 const addButton = document.querySelector("#addButton");
 const removeButton = document.querySelector("#removeButton");
-// const undoButton = document.querySelector("#undoButton");
 const resetButton = document.querySelector("#resetButton");
 const calories = document.querySelector("#caloriesInput");
 const total = document.querySelector("#total");
@@ -140,7 +133,7 @@ let calorieValue = 0; // calories input
 let totalCalories = 0; // total calories consumed
 let percent = 0; //percnet for circleAnimation
 let actualPercent = 0; //percent*100 for display
-let added = 0; //to store the calories added, after we convert it into a string to call the undo button
+let added = 0;
 let totalInputCalories = 0; // used in chart()
 const perimeter = circle.getAttribute("r") * 2 * Math.PI;
 circle.setAttribute("stroke-dasharray", perimeter);
@@ -149,17 +142,9 @@ const tracker = new Tracker(
 	circleDisplay,
 	addButton,
 	removeButton,
-	// undoButton,
 	resetButton,
 	calories,
 	total,
 	goal
 );
 
-// this.calories.addEventListener("keypress", this.addCalories);
-//PRESS ENTER ADD CALORIES
-// addCalories = (e) => {
-// 	if (13 == e.keyCode) {
-// 		this.incrementCalories();
-// 	}
-// };
